@@ -1,0 +1,5 @@
+# Este sitio es de una sola página, por ahora no hace falta ningún redirect.
+# El dominio se registra sin "www" (basliniginecologia.com.ar), así que no hace
+# falta redirigir esa variante. Si en el futuro se agregan más páginas o cambia
+# alguna URL, agregar acá las reglas, por ejemplo:
+# /turnos  /contacto/  301

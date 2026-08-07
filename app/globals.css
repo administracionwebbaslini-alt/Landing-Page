@@ -53,7 +53,7 @@
 
   /* ---------- header ---------- */
   header{ position:sticky; top:0; z-index:50; background:rgba(251,250,246,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--borde); }
-  .header-fila{ display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
+  .header-fila{ display:flex; align-items:center; justify-content:space-between; padding-top:12px; padding-bottom:12px; }
   .marca-header{ display:flex; align-items:center; gap:11px; }
   .marca-header img{ height:34px; width:auto; }
   .marca-texto{ display:flex; flex-direction:column; line-height:1.2; }

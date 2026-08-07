@@ -63,14 +63,14 @@
   nav a.enlace{ font-size:14px; font-weight:500; color:var(--tinta-suave); }
   nav a.enlace:hover{ color:var(--verde-oscuro); }
   @media (max-width:760px){ nav .enlace{ display:none; } }
-  .header-social-icon{
+  .header-social-icon, .footer-social-icon{
     display:flex; align-items:center; justify-content:center;
     width:38px; height:38px; border-radius:50%;
     background: var(--rosa-suave); color: var(--verde-oscuro);
     flex-shrink:0;
   }
-  .header-social-icon:hover{ background: var(--rosa); }
-  .header-social-icon svg{ width:18px; height:18px; }
+  .header-social-icon:hover, .footer-social-icon:hover{ background: var(--rosa); }
+  .header-social-icon svg, .footer-social-icon svg{ width:18px; height:18px; }
   @media (max-width:600px){
     .header-fila{ gap:10px; }
     .marca-header{ margin-left:8px; }
@@ -374,14 +374,6 @@
   .footer-top .marca-header img{ height:26px; }
   .footer-top .marca-header strong{ font-size:13px; }
   .footer-top .marca-header span{ font-size:11px; }
-  .footer-social-icon{
-    display:flex; align-items:center; justify-content:center;
-    width:38px; height:38px; border-radius:50%;
-    background: var(--rosa-suave); color: var(--verde-oscuro);
-    flex-shrink:0;
-  }
-  .footer-social-icon:hover{ background: var(--rosa); }
-  .footer-social-icon svg{ width:18px; height:18px; }
   .footer-bottom{
     border-top:1px solid var(--borde); padding:18px 0;
     font-size:12.5px; color: var(--tinta-suave); text-align:center;

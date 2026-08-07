@@ -2,7 +2,7 @@
 
 Landing page de la Dra. María Gabriela Baslini (ginecología funcional y
 estética, Banfield, Buenos Aires). Proyecto Next.js con **exportación
-estática**, pensado para desplegarse en **Cloudflare Pages**.
+estática**, desplegado en **Cloudflare Workers (con static assets)**.
 
 > **Sobre el diseño**: este proyecto convierte el mockup HTML **"Versión
 > final post primer entregable"** (aprobado por el equipo/clienta, con
@@ -27,7 +27,7 @@ estática**, pensado para desplegarse en **Cloudflare Pages**.
 |---|---|
 | Framework | Next.js 14 (App Router, `output: 'export'`) |
 | UI | React + CSS puro (mismo CSS del mockup, sin Tailwind) |
-| Hosting | Cloudflare Pages (plan gratuito) |
+| Hosting | Cloudflare Workers con static assets (plan gratuito) |
 | Dominio | `ginecodrabaslini.com.ar` (NIC.ar) |
 | Imágenes | WebP, servidas como archivos estáticos (`next/image` no se usa: con export estático y sin proveedor de optimización, `unoptimized: true` es la config correcta) |
 
@@ -37,6 +37,16 @@ y arriesgar diferencias visuales sutiles (espaciados, breakpoints), algo que
 la consigna del proyecto prohíbe explícitamente. Se mantuvo el CSS original
 tal cual, solo movido a `app/globals.css`. Si más adelante se agregan páginas
 nuevas, Tailwind puede sumarse sin tocar este archivo.
+
+**¿Por qué Cloudflare Workers y no Cloudflare Pages?** El proyecto arrancó
+pensado para Pages (hosting de sitios estáticos más simple), pero desde que
+Workers puede servir archivos estáticos directamente (función "static
+assets"), Cloudflare lo convirtió en su plataforma recomendada para
+proyectos nuevos — Pages sigue funcionando, pero quedó en modo mantenimiento
+(sin desarrollo activo de features nuevas). Para este sitio no cambia nada
+en la práctica: mismos archivos, mismo CDN, mismo resultado. La única
+diferencia real es que Workers necesita el archivo `wrangler.jsonc` en la
+raíz del repo (Pages no lo necesita) para saber qué carpeta servir.
 
 ---
 
@@ -65,13 +75,14 @@ nuevas, Tailwind puede sumarse sin tocar este archivo.
 │   ├── images/              # fotos en WebP
 │   ├── icons/                # favicons / íconos PWA
 │   ├── scripts/               # JS modular (carrusel, tracking)
-│   ├── _headers               # cabeceras de seguridad (Cloudflare Pages)
-│   ├── _redirects              # reglas de redirect (Cloudflare Pages)
+│   ├── _headers               # cabeceras de seguridad (Workers/Pages)
+│   ├── _redirects              # reglas de redirect (Workers/Pages)
 │   ├── robots.txt
 │   ├── sitemap.xml
 │   ├── manifest.webmanifest
 │   └── favicon.ico
 ├── next.config.js
+├── wrangler.jsonc          # config de despliegue en Cloudflare Workers
 ├── package.json
 ├── LICENSE
 ├── CHANGELOG.md
@@ -105,24 +116,36 @@ listos para servir desde cualquier hosting estático).
 
 ---
 
-## Despliegue en Cloudflare Pages
+## Despliegue en Cloudflare Workers
+
+El repo incluye `wrangler.jsonc`, que le dice a Cloudflare que sirva la
+carpeta `out/` como sitio estático (sin necesidad de un script de Worker con
+lógica propia — es un despliegue 100% estático, solo que corre sobre la
+infraestructura de Workers en vez de Pages).
 
 Orden recomendado para minimizar downtime (ya que el dominio se registra
 en NIC.ar y hoy no apunta a ningún hosting):
 
-1. **Crear el proyecto en Cloudflare Pages** conectado a este repositorio de
-   GitHub.
+1. **Conectar el proyecto en Cloudflare** (Workers & Pages → Create →
+   Workers → Connect to Git) a este repositorio de GitHub.
    - Build command: `npm run build`
-   - Build output directory: `out`
+   - Deploy command: `npx wrangler deploy` (ya viene resuelto por
+     `wrangler.jsonc` — no hace falta indicar carpeta de salida a mano)
    - Variables de entorno: ninguna requerida.
-2. **Verificar que el sitio funciona** en la URL temporal `*.pages.dev`.
+2. **Verificar que el sitio funciona** en la URL temporal `*.workers.dev`
+   que asigna Cloudflare.
 3. Recién ahí, **delegar el dominio** `ginecodrabaslini.com.ar` desde
-   NIC.ar hacia los nameservers de Cloudflare, y agregar el dominio custom en
-   el proyecto de Pages.
+   NIC.ar hacia los nameservers de Cloudflare, y agregar el dominio custom
+   en el proyecto.
 
-Cloudflare Pages sirve automáticamente los archivos de `out/`, respeta
-`_headers` y `_redirects` sin configuración adicional, y aplica compresión
-Brotli/Gzip a nivel de CDN (no requiere configuración extra en el proyecto).
+Cloudflare sirve automáticamente los archivos de `out/` (según
+`wrangler.jsonc`), respeta `_headers` y `_redirects` sin configuración
+adicional (soporte nativo en Workers con static assets, igual que en
+Pages), y aplica compresión Brotli/Gzip a nivel de CDN.
+
+> Si en algún momento prefieren mover esto a Cloudflare Pages en vez de
+> Workers, el repo también sirve tal cual: Pages ignora `wrangler.jsonc` y
+> solo pide configurar "Build output directory: `out`" a mano en el panel.
 
 ---
 
@@ -175,7 +198,7 @@ comentario en el propio archivo.
   `script-src` porque Next.js con `output: 'export'` inyecta pequeños
   scripts inline de hidratación que no pueden evitarse sin infraestructura
   de nonces (fuera del alcance de un export 100% estático). Si en el futuro
-  se migra a Cloudflare Pages Functions o SSR, se puede endurecer con nonces.
+  se migra a Cloudflare Workers con lógica propia o SSR, se puede endurecer con nonces.
 - **Strict-Transport-Security**, **X-Frame-Options**, **X-Content-Type-Options**,
   **Referrer-Policy** y **Permissions-Policy** con configuración restrictiva
   estándar.
@@ -226,6 +249,6 @@ correspondiente si cambia el nombre de archivo).
 El sitio **no tiene formularios**: toda la conversión de leads es vía
 WhatsApp (`wa.me`), Instagram y el mapa de Google. Si en el futuro se agrega
 un formulario de contacto, al ser un sitio 100% estático hay que conectarlo
-a un servicio externo (por ejemplo Cloudflare Pages Functions, Formspree o
+a un servicio externo (por ejemplo Cloudflare Workers, Formspree o
 similar) — nunca procesar datos sensibles ni exponer credenciales en el
 código del cliente.

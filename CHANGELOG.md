@@ -2,6 +2,27 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
+## [2.2.0] - 2026-08-07
+
+### Cambiado
+- **Hosting: de Cloudflare Pages a Cloudflare Workers (con static assets)**.
+  El proyecto real ya estaba desplegado como Worker (no Pages), y además
+  Cloudflare pasó a recomendar Workers para proyectos nuevos desde que
+  puede servir archivos estáticos directamente — Pages sigue funcionando
+  pero quedó en modo mantenimiento. No cambia nada del resultado del sitio,
+  solo la infraestructura de despliegue.
+- Se agregó `wrangler.jsonc` en la raíz del repo, apuntando a `./out` con
+  `not_found_handling: "404-page"` — es lo que le indica a Cloudflare qué
+  carpeta servir (antes el `npx wrangler deploy` del proyecto no tenía esa
+  información y probablemente re-desplegaba un Worker de ejemplo viejo en
+  vez de este sitio).
+- Ajuste de mobile: más margen para el ícono de Instagram del header
+  (`margin-right` de 4px a 10px), a pedido explícito tras revisar en
+  dispositivo real.
+- README y `RESPUESTA_AGENCIA.md` actualizados para reflejar Workers en vez
+  de Pages en toda la documentación (stack, instrucciones de despliegue,
+  respuestas a la agencia).
+
 ## [2.1.0] - 2026-08-07
 
 ### Confirmado

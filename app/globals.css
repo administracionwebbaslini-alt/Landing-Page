@@ -74,9 +74,9 @@
     .header-fila{ gap:10px; }
     .marca-texto strong{ font-size:12.5px; }
     .marca-texto span{ font-size:10.5px; }
-    nav{ gap:12px; }
+    nav{ flex:1; justify-content:center; gap:12px; }
     nav .btn-whatsapp{ display:none; } /* el botón flotante ya cubre esta acción en mobile */
-    .header-social-icon{ margin-right:10px; }
+    .header-social-icon{ margin-right:0; }
   }
 
   /* ---------- hero ---------- */

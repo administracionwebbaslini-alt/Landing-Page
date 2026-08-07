@@ -5,7 +5,7 @@ export default function Footer() {
 <footer>
   <div className="envoltorio footer-top">
     <a href="#inicio" className="marca-header">
-      <img src="/images/logo.png" alt="" width="103" height="91" loading="lazy" decoding="async" />
+      <img src="/images/logo.png" alt="" width="343" height="300" loading="lazy" decoding="async" />
       <span className="marca-texto">
         <strong>Dra. María Gabriela Baslini</strong>
         <span>MN 111.324 · MP 227.202</span>

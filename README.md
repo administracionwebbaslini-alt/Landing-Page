@@ -16,11 +16,8 @@ estática**, pensado para desplegarse en **Cloudflare Pages**.
 > visible del HTML final exportado es carácter por carácter idéntico al
 > mockup original.
 
-> ⚠️ **Dominio pendiente de confirmar**: todo el código usa
-> `basliniginecologia.com.ar` como dominio (constante `SITE_URL` en
-> `app/layout.jsx`, más `robots.txt` y `sitemap.xml`). El PDF de la agencia
-> menciona `ginecodrabaslini.com.ar` en su nombre de archivo — hay que
-> resolver la discrepancia antes de publicar. Ver `RESPUESTA_AGENCIA.md`.
+> **Dominio**: `ginecodrabaslini.com.ar` (confirmado por la clienta/agencia).
+> Usado en `SITE_URL` (`app/layout.jsx`), `robots.txt` y `sitemap.xml`.
 
 ---
 
@@ -31,7 +28,7 @@ estática**, pensado para desplegarse en **Cloudflare Pages**.
 | Framework | Next.js 14 (App Router, `output: 'export'`) |
 | UI | React + CSS puro (mismo CSS del mockup, sin Tailwind) |
 | Hosting | Cloudflare Pages (plan gratuito) |
-| Dominio | `basliniginecologia.com.ar` (NIC.ar) |
+| Dominio | `ginecodrabaslini.com.ar` (NIC.ar) |
 | Imágenes | WebP, servidas como archivos estáticos (`next/image` no se usa: con export estático y sin proveedor de optimización, `unoptimized: true` es la config correcta) |
 
 **¿Por qué no Tailwind?** El mockup ya trae un CSS a medida, muy acotado
@@ -119,7 +116,7 @@ en NIC.ar y hoy no apunta a ningún hosting):
    - Build output directory: `out`
    - Variables de entorno: ninguna requerida.
 2. **Verificar que el sitio funciona** en la URL temporal `*.pages.dev`.
-3. Recién ahí, **delegar el dominio** `basliniginecologia.com.ar` desde
+3. Recién ahí, **delegar el dominio** `ginecodrabaslini.com.ar` desde
    NIC.ar hacia los nameservers de Cloudflare, y agregar el dominio custom en
    el proyecto de Pages.
 

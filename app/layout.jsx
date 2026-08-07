@@ -2,9 +2,8 @@
 import Script from 'next/script';
 import './globals.css';
 
-// ⚠️ Dominio pendiente de confirmación — ver aviso en el chat.
-// Usar el dominio real definitivo acá y en next.config.js / _headers antes de publicar.
-const SITE_URL = 'https://basliniginecologia.com.ar';
+// Dominio confirmado por la clienta/agencia: ginecodrabaslini.com.ar
+const SITE_URL = 'https://ginecodrabaslini.com.ar';
 
 // Pedido de la agencia (Carolina Puppo) — instalar en todas las páginas.
 const GTM_ID = 'GTM-M57LK7GP';

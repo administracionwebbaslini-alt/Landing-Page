@@ -2,6 +2,39 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 
+## [2.1.0] - 2026-08-07
+
+### Confirmado
+- **Dominio definitivo**: `ginecodrabaslini.com.ar`, actualizado en
+  `app/layout.jsx` (`SITE_URL`), `robots.txt` y `sitemap.xml`.
+
+### Corregido
+- **Logo sin fondo**: se extrajo el isologotipo directamente del archivo
+  vectorial (`.ai`, formato PDF-compatible) en vez del PNG rasterizado que
+  traía un fondo crema sólido. Recoloreado al verde de marca exacto
+  (`#98A871`), con transparencia real y mucha mayor nitidez. Se actualizó
+  también en favicons e íconos PWA.
+- **Riesgo de distorsión en fotos ("alargadas")**: `.sobre-foto img` y
+  `.espacio-foto img` no tenían `object-fit` ni bloqueaban el
+  `aspect-ratio` que los navegadores calculan automáticamente a partir de
+  los atributos `width`/`height` del HTML. Si una foto se reemplaza por
+  otra de proporciones distintas sin actualizar esos atributos, el
+  navegador la estira para forzarla en la caja "vieja" (comportamiento por
+  defecto `object-fit:fill`). Se agregó `aspect-ratio:auto;
+  object-fit:cover; height:auto;` para blindar el sitio ante ese caso, sin
+  cambiar el resultado visual cuando la foto sí coincide con sus atributos.
+- **Mobile — botón de Instagram muy pegado al borde**: se sumó
+  `margin-right:4px` al ícono en el breakpoint mobile.
+- **Mobile — tags de subespecialidad pegados al borde de la tarjeta de
+  credenciales**: se sumó padding extra a `.credencial-perfil` y
+  `.credencial-info` en mobile (breathing room, sin cambiar el layout).
+
+> Nota: las capturas que motivaron estos cambios eran de un despliegue
+> distinto (`administracionweb-baslini.workers.dev`), con fotos que no
+> coinciden con las de este repo — no se pudo confirmar 1:1 que el mismo
+> bug estuviera presente acá, pero las correcciones son válidas y
+> preventivas de todos modos.
+
 ## [2.0.0] - 2026-08-06
 
 ### Base de contenido
@@ -47,9 +80,6 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
   diff de CSS (0 diferencias fuera de un cambio intencional no visual).
 
 ### Pendiente antes de publicar
-- **Confirmar el dominio real** — el código usa `basliniginecologia.com.ar`,
-  pero el PDF de la agencia sugiere `ginecodrabaslini.com.ar` en su nombre
-  de archivo. Ver aviso en `README.md` y `RESPUESTA_AGENCIA.md`.
 - Reemplazar los 5 testimonios de ejemplo por reseñas reales de Google
   Business (marcado en `Testimonios.jsx`).
 - Registrar el dominio en NIC.ar y completar el despliegue en Cloudflare

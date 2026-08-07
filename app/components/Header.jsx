@@ -5,7 +5,7 @@ export default function Header() {
 <header>
   <div className="envoltorio header-fila">
     <a href="#inicio" className="marca-header">
-      <img src="/images/logo.png" alt="" width="103" height="91" loading="lazy" decoding="async" />
+      <img src="/images/logo.png" alt="" width="343" height="300" loading="lazy" decoding="async" />
       <span className="marca-texto">
         <strong>DRA. GABRIELA BASLINI</strong>
         <span>Ginecología funcional y estética</span>

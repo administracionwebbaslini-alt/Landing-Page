@@ -25,7 +25,7 @@ export default function Testimonios() {
           <div className="testimonio-estrellas">★★★★★</div>
           <p className="testimonio-texto">Excelente profesional! Siempre actualizada! Atenta a las necesidades del paciente.</p>
           <div className="testimonio-autor">
-            <span className="testimonio-avatar">E</span>
+            <span className="testimonio-avatar"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8.2" r="3.6"/><path d="M12 13.2c-4.4 0-8 2.3-8 5.1V20h16v-1.7c0-2.8-3.6-5.1-8-5.1Z"/></svg></span>
             <div>
               <strong>Elisa G.</strong>
               <span>Reseña de Google</span>
@@ -38,7 +38,7 @@ export default function Testimonios() {
           <div className="testimonio-estrellas">★★★★★</div>
           <p className="testimonio-texto">La Dra. Baslini, además de ser muy clara en su explicación del tratamiento, es sumamente cálida y muy atenta. Excelente atención.</p>
           <div className="testimonio-autor">
-            <span className="testimonio-avatar">V</span>
+            <span className="testimonio-avatar"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8.2" r="3.6"/><path d="M12 13.2c-4.4 0-8 2.3-8 5.1V20h16v-1.7c0-2.8-3.6-5.1-8-5.1Z"/></svg></span>
             <div>
               <strong>Valeria C.</strong>
               <span>Reseña de Google</span>
@@ -51,7 +51,7 @@ export default function Testimonios() {
           <div className="testimonio-estrellas">★★★★★</div>
           <p className="testimonio-texto">Excelente profesional, escucha invaluable, dedicación y compromiso. Seguro la recomendaría.</p>
           <div className="testimonio-autor">
-            <span className="testimonio-avatar">L</span>
+            <span className="testimonio-avatar"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8.2" r="3.6"/><path d="M12 13.2c-4.4 0-8 2.3-8 5.1V20h16v-1.7c0-2.8-3.6-5.1-8-5.1Z"/></svg></span>
             <div>
               <strong>Luciana R.</strong>
               <span>Reseña de Google</span>
@@ -64,7 +64,7 @@ export default function Testimonios() {
           <div className="testimonio-estrellas">★★★★★</div>
           <p className="testimonio-texto">Gabi es de mis personas favoritas. No solo como profesional sino como mujer. Absolutamente todo lo que hace, es desde el corazón.</p>
           <div className="testimonio-autor">
-            <span className="testimonio-avatar">N</span>
+            <span className="testimonio-avatar"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8.2" r="3.6"/><path d="M12 13.2c-4.4 0-8 2.3-8 5.1V20h16v-1.7c0-2.8-3.6-5.1-8-5.1Z"/></svg></span>
             <div>
               <strong>Na M.</strong>
               <span>Reseña de Google</span>
@@ -77,7 +77,7 @@ export default function Testimonios() {
           <div className="testimonio-estrellas">★★★★★</div>
           <p className="testimonio-texto">Excelente profesional.</p>
           <div className="testimonio-autor">
-            <span className="testimonio-avatar">M</span>
+            <span className="testimonio-avatar"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8.2" r="3.6"/><path d="M12 13.2c-4.4 0-8 2.3-8 5.1V20h16v-1.7c0-2.8-3.6-5.1-8-5.1Z"/></svg></span>
             <div>
               <strong>María Fernanda</strong>
               <span>Reseña de Google</span>

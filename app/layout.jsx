@@ -124,7 +124,15 @@ const faqJsonLd = {
       name: '¿Atienden con obra social o prepaga?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No, la atención es particular. No se trabaja con obras sociales ni prepagas, lo que permite dedicar el tiempo necesario a cada consulta sin las limitaciones de esos convenios.',
+        text: 'No. La Dra. Gabriela Baslini atiende de forma particular, sin convenios con obras sociales ni prepagas. Esto permite dedicar el tiempo necesario a cada consulta, sin las limitaciones de tiempo o de prácticas que suelen imponer esos convenios.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Puedo hacer la consulta por videollamada?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí. Además de la atención presencial en Banfield, la Dra. Baslini ofrece consultas virtuales por WhatsApp, ideales si preferís comodidad o no podés trasladarte. Se coordinan del mismo modo que un turno presencial: escribiendo al 11 5897-4754.',
       },
     },
     {
@@ -132,7 +140,7 @@ const faqJsonLd = {
       name: '¿Cómo agendo un turno?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Escribiendo por WhatsApp al 11 5897-4754. Coordinamos juntas el día y horario según la disponibilidad de la agenda.',
+        text: 'Escribiendo por WhatsApp al 11 5897-4754. Ahí coordinamos juntas el día y el horario según la disponibilidad de la agenda, ya sea para una consulta presencial en Banfield o una consulta virtual.',
       },
     },
     {
@@ -148,15 +156,7 @@ const faqJsonLd = {
       name: '¿Atienden en todas las etapas de la vida, incluyendo adolescencia y menopausia?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sí. El acompañamiento está pensado para cada etapa: ginecología infantojuvenil, anticoncepción, fertilidad, climaterio y menopausia, siempre con un enfoque integral y sin prejuicios.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: '¿Puedo hacer la consulta por videollamada?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sí. Además de la atención presencial en Banfield, ofrezco videoconsultas por WhatsApp, ideales si preferís comodidad o no podés trasladarte. Se coordinan de la misma forma: escribiéndome por WhatsApp.',
+        text: 'Sí. El acompañamiento de la Dra. Baslini está pensado para cada etapa de la vida: ginecología infantojuvenil, anticoncepción, fertilidad, climaterio y menopausia, siempre con un enfoque integral y sin prejuicios.',
       },
     },
   ],

@@ -11,23 +11,23 @@ export default function Faq() {
     <div className="faq-lista">
       <details className="faq-item" open>
         <summary>¿Atienden con obra social o prepaga?</summary>
-        <p>No, la atención es particular. No se trabaja con obras sociales ni prepagas, lo que permite dedicar el tiempo necesario a cada consulta sin las limitaciones de esos convenios.</p>
-      </details>
-      <details className="faq-item">
-        <summary>¿Cómo agendo un turno?</summary>
-        <p>Escribiendo por WhatsApp al 11 5897-4754. Coordinamos juntas el día y horario según la disponibilidad de la agenda.</p>
-      </details>
-      <details className="faq-item">
-        <summary>¿Qué debo llevar a la primera consulta?</summary>
-        <p>Si tenés estudios, análisis o informes previos relacionados con tu consulta, es útil traerlos. No es excluyente: si no los tenés, igual podemos avanzar en la primera cita.</p>
-      </details>
-      <details className="faq-item">
-        <summary>¿Atienden en todas las etapas de la vida, incluyendo adolescencia y menopausia?</summary>
-        <p>Sí. El acompañamiento está pensado para cada etapa: ginecología infantojuvenil, anticoncepción, fertilidad, climaterio y menopausia, siempre con un enfoque integral y sin prejuicios.</p>
+        <p>No. La <strong>Dra. Gabriela Baslini</strong> atiende de forma <strong>particular</strong>, sin convenios con obras sociales ni prepagas. Esto permite dedicar el tiempo necesario a cada consulta, sin las limitaciones de tiempo o de prácticas que suelen imponer esos convenios.</p>
       </details>
       <details className="faq-item">
         <summary>¿Puedo hacer la consulta por videollamada?</summary>
-        <p>Sí. Además de la atención presencial en Banfield, ofrezco videoconsultas por WhatsApp, ideales si preferís comodidad o no podés trasladarte. Se coordinan de la misma forma: escribiéndome por WhatsApp.</p>
+        <p>Sí. Además de la atención <strong>presencial en Banfield</strong>, la Dra. Baslini ofrece <strong>consultas virtuales por WhatsApp</strong>, ideales si preferís comodidad o no podés trasladarte. Se coordinan del mismo modo que un turno presencial: escribiendo al <strong>11 5897-4754</strong>.</p>
+      </details>
+      <details className="faq-item">
+        <summary>¿Cómo agendo un turno?</summary>
+        <p>Escribiendo por <strong>WhatsApp al 11 5897-4754</strong>. Ahí coordinamos juntas el día y el horario según la disponibilidad de la agenda, ya sea para una consulta presencial en Banfield o una consulta virtual.</p>
+      </details>
+      <details className="faq-item">
+        <summary>¿Qué debo llevar a la primera consulta?</summary>
+        <p>Si tenés <strong>estudios, análisis o informes previos</strong> relacionados con tu consulta, es útil traerlos. No es excluyente: si no los tenés, igual podemos avanzar en la primera cita.</p>
+      </details>
+      <details className="faq-item">
+        <summary>¿Atienden en todas las etapas de la vida, incluyendo adolescencia y menopausia?</summary>
+        <p>Sí. El acompañamiento de la Dra. Baslini está pensado para <strong>cada etapa de la vida</strong>: ginecología infantojuvenil, anticoncepción, fertilidad, climaterio y menopausia, siempre con un <strong>enfoque integral y sin prejuicios</strong>.</p>
       </details>
     </div>
   </div>

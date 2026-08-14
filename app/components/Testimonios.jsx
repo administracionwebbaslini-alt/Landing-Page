@@ -1,7 +1,6 @@
 /* ===================== PRUEBA SOCIAL — CARRUSEL DE GOOGLE ===================== */
-/* NOTA PARA LA CLIENTA: los 5 testimonios de abajo son EJEMPLOS de estilo/tono.
-     Reemplazar cada texto y nombre por reseñas reales copiadas de la ficha de Google Business,
-     eligiendo las que mejor hablen de escucha, tiempo y trato sin prejuicios. */
+/* Reseñas reales tomadas de la ficha de Google Business Profile de la Dra. Baslini
+     (captura de referencia: 5.0 · 32 opiniones, verificado 14/8/2026). */
 export default function Testimonios() {
   return (
 <section className="social" id="testimonios">
@@ -13,7 +12,7 @@ export default function Testimonios() {
         <span className="rating-numero">5.0</span>
         <div>
           <div className="rating-estrellas">★★★★★</div>
-          <div className="rating-detalle">25 opiniones en Google</div>
+          <div className="rating-detalle">32 opiniones en Google</div>
         </div>
       </div>
     </div>
@@ -24,11 +23,11 @@ export default function Testimonios() {
         <article className="testimonio-card">
           <span className="testimonio-comillas">”</span>
           <div className="testimonio-estrellas">★★★★★</div>
-          <p className="testimonio-texto">Me sentí escuchada desde el primer minuto. Explica todo con calma, sin apuro y sin juzgar. Hacía años que no tenía una consulta así.</p>
+          <p className="testimonio-texto">Excelente profesional! Siempre actualizada! Atenta a las necesidades del paciente.</p>
           <div className="testimonio-autor">
-            <span className="testimonio-avatar">M</span>
+            <span className="testimonio-avatar">E</span>
             <div>
-              <strong>Mariana G.</strong>
+              <strong>Elisa G.</strong>
               <span>Reseña de Google</span>
             </div>
           </div>
@@ -37,50 +36,50 @@ export default function Testimonios() {
         <article className="testimonio-card">
           <span className="testimonio-comillas">”</span>
           <div className="testimonio-estrellas">★★★★★</div>
-          <p className="testimonio-texto">Profesional, cálida y muy clara para explicar. Resolvió mis dudas sobre el tratamiento sin que me sintiera apurada en ningún momento.</p>
-          <div className="testimonio-autor">
-            <span className="testimonio-avatar">L</span>
-            <div>
-              <strong>Laura P.</strong>
-              <span>Reseña de Google</span>
-            </div>
-          </div>
-        </article>
-
-        <article className="testimonio-card">
-          <span className="testimonio-comillas">”</span>
-          <div className="testimonio-estrellas">★★★★★</div>
-          <p className="testimonio-texto">Fui con muchos prejuicios propios y me hizo sentir totalmente cómoda. Se nota la experiencia y las ganas de acompañar de verdad.</p>
-          <div className="testimonio-autor">
-            <span className="testimonio-avatar">C</span>
-            <div>
-              <strong>Carolina D.</strong>
-              <span>Reseña de Google</span>
-            </div>
-          </div>
-        </article>
-
-        <article className="testimonio-card">
-          <span className="testimonio-comillas">”</span>
-          <div className="testimonio-estrellas">★★★★★</div>
-          <p className="testimonio-texto">Excelente atención de principio a fin. Te explica cada estudio y opción con mucha paciencia, algo que valoro muchísimo.</p>
-          <div className="testimonio-autor">
-            <span className="testimonio-avatar">S</span>
-            <div>
-              <strong>Sofía R.</strong>
-              <span>Reseña de Google</span>
-            </div>
-          </div>
-        </article>
-
-        <article className="testimonio-card">
-          <span className="testimonio-comillas">”</span>
-          <div className="testimonio-estrellas">★★★★★</div>
-          <p className="testimonio-texto">La recomiendo siempre. Es muy humana, atiende con tiempo real y te da la información necesaria para decidir tranquila.</p>
+          <p className="testimonio-texto">La Dra. Baslini, además de ser muy clara en su explicación del tratamiento, es sumamente cálida y muy atenta. Excelente atención.</p>
           <div className="testimonio-autor">
             <span className="testimonio-avatar">V</span>
             <div>
-              <strong>Valentina M.</strong>
+              <strong>Valeria C.</strong>
+              <span>Reseña de Google</span>
+            </div>
+          </div>
+        </article>
+
+        <article className="testimonio-card">
+          <span className="testimonio-comillas">”</span>
+          <div className="testimonio-estrellas">★★★★★</div>
+          <p className="testimonio-texto">Excelente profesional, escucha invaluable, dedicación y compromiso. Seguro la recomendaría.</p>
+          <div className="testimonio-autor">
+            <span className="testimonio-avatar">L</span>
+            <div>
+              <strong>Luciana R.</strong>
+              <span>Reseña de Google</span>
+            </div>
+          </div>
+        </article>
+
+        <article className="testimonio-card">
+          <span className="testimonio-comillas">”</span>
+          <div className="testimonio-estrellas">★★★★★</div>
+          <p className="testimonio-texto">Gabi es de mis personas favoritas. No solo como profesional sino como mujer. Absolutamente todo lo que hace, es desde el corazón.</p>
+          <div className="testimonio-autor">
+            <span className="testimonio-avatar">N</span>
+            <div>
+              <strong>Na M.</strong>
+              <span>Reseña de Google</span>
+            </div>
+          </div>
+        </article>
+
+        <article className="testimonio-card">
+          <span className="testimonio-comillas">”</span>
+          <div className="testimonio-estrellas">★★★★★</div>
+          <p className="testimonio-texto">Excelente profesional.</p>
+          <div className="testimonio-autor">
+            <span className="testimonio-avatar">M</span>
+            <div>
+              <strong>María Fernanda</strong>
               <span>Reseña de Google</span>
             </div>
           </div>
